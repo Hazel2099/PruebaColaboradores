@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { TextField, Checkbox, Button, FormControlLabel, Grid } from '@mui/material';
 import { Box } from '@mui/material';
-import { withRouter } from 'react-router-dom';
+
 
 class CrearComponent extends Component {
   state = {
@@ -35,7 +35,7 @@ class CrearComponent extends Component {
     axios.post('https://localhost:44354/api/Author', newData)
       .then(() => {
         alert('Autor creado correctamente');
-        this.props.history.push('/grid');
+   
       })
       .catch(error => {
         alert('Fallo al crear el autor');
@@ -144,6 +144,6 @@ class CrearComponent extends Component {
       </div>
     );
   }
-}hhhjj
-jjj
+}
+
 export default CrearComponent;
